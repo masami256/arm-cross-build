@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  builder:
+    build: .
+    image: aarch64-cross-builder
+    hostname: fedora-aarch64
+    volumes:
+      - ./src:/src:z
+    command: make all
