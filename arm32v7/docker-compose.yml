@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  builder:
+    build: .
+    image: arm32v7-cross-builder
+    hostname: fedora-arm32v7
+    volumes:
+      - ./src:/src:z
+    command: make all
